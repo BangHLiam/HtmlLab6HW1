@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab6hw1</title>
+    <script>
+        function checkPassword(){
+            let Pas1 = document.getElementById("pass1");
+            word1 = Pas1.value
+
+            let Pas2 = document.getElementById("pass2");
+            word2 = Pas2.value
+
+            let Check = document.getElementById("errormsg");
+            if(word1 != word2){
+                
+                Check.innerHTML = "Incorrect"
+                Check.style.color = "red"
+            }
+            else{
+                Check.innerHTML = "Correct"
+                Check.style.color = "green"
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Register</h1>
+    Username : <input type="text"><br>
+    Password: <input type="text" id="pass1"><br>
+    Re-type Password: <input type="text" id="pass2"><br>
+    <input type="submit" onclick="checkPassword()">
+    <div id="errormsg"></div>
+    
+</body>
+</html>
